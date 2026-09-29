@@ -1,0 +1,101 @@
+:root {
+  --verde-profundo: #112d22;
+  --verde-medio: #1b4332;
+  --verde-acento: #2d6a4f;
+  
+  --beige-fondo: #e6dfd3;       /* Beige tostado profundo */
+  --beige-tarjeta: #f4efe6;     /* Fondo de tarjeta cálido */
+  --beige-borde: #d1c7b7;       /* Borde sutil */
+  --texto-principal: #1f2923;
+  --color-precio: #2d6a4f;
+}
+
+body {
+  background-color: var(--beige-fondo);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--texto-principal);
+}
+
+/* Cabecera limpia y técnica */
+.tech-header {
+  background: linear-gradient(135deg, var(--verde-profundo) 0%, var(--verde-medio) 100%);
+  color: #ffffff;
+  border-radius: 1rem;
+  padding: 2.5rem 1.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(17, 45, 34, 0.15);
+  border-bottom: 3px solid var(--verde-acento);
+}
+
+.tech-header p {
+  color: #c2d6cb !important;
+}
+
+/* Tarjetas minimalistas */
+.card-tech {
+  background-color: var(--beige-tarjeta);
+  border: 1.5px solid var(--beige-borde) !important;
+  border-radius: 0.85rem !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-tech:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(17, 45, 34, 0.12) !important;
+  border-color: var(--verde-acento) !important;
+}
+
+/* Contenedor de imagen */
+.card-img-wrapper {
+  overflow: hidden;
+  border-top-left-radius: calc(0.85rem - 1px);
+  border-top-right-radius: calc(0.85rem - 1px);
+  height: 200px;
+  background-color: #dcd4c5;
+  border-bottom: 1px solid var(--beige-borde);
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-tech:hover .card-img-wrapper img {
+  transform: scale(1.04);
+}
+
+/* Insignia de categoría discreta */
+.badge-categoria {
+  background-color: var(--verde-medio);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.7rem;
+  padding: 0.35em 0.75em;
+  border-radius: 50rem;
+  letter-spacing: 0.5px;
+}
+
+/* Precio limpio */
+.precio-carro {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-precio);
+}
+
+/* Botón de acción minimalista */
+.btn-tech {
+  background-color: var(--verde-medio);
+  color: #ffffff;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-tech:hover {
+  background-color: var(--verde-profundo);
+  color: #ffffff;
+}
